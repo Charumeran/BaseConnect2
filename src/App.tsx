@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, BrowserRouter } from "react-router-dom";
 import HomePage from "./HomePage";
 import PostPage from "./PostPage";
 
@@ -9,7 +9,7 @@ const App = () => {
 
 
     return(
-        <Router>
+        <BrowserRouter basename={ process.env.NODE_ENV === "production" ? "/BaseConnect2/" : "/"}>
             <div>
                 <nav>
                     <Link to = "/search"></Link>
@@ -32,7 +32,7 @@ const App = () => {
                     />
                 </Routes>
             </div>
-        </Router>
+        </BrowserRouter>
     )
 }
 

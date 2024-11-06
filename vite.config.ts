@@ -6,5 +6,5 @@ export default defineConfig({
   // base: '/Assignment/',
   plugins: [react()],
   build: {sourcemap: true,},
-  base: '/assignment2/',
+  base: process.env.NODE_ENV === "production" ? "/BaseConnect2/" : "/",
 })
