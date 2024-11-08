@@ -35,7 +35,7 @@ const PostPage: React.FC<PostPageProps> = () => {
                 setIncome("");
                 setCategory(null);
                 setIsCategoryOpen(false);
-                navigate(process.env.NODE_ENV === "production" ? "/BaseConnect2/" : "/");
+                navigate("/");
             } catch ( error ){
                 console.error( "Error creating post:", error );
 
