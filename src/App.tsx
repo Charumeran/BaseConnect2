@@ -9,7 +9,7 @@ const App = () => {
 
 
     return(
-        <BrowserRouter basename={ process.env.NODE_ENV === "production" ? "/BaseConnect2" : "/"}>
+        <BrowserRouter basename={ process.env.NODE_ENV === "production" ? "/BaseConnect2/" : "/"}>
             <div>
                 <nav>
                     <Link to = "/search"></Link>
