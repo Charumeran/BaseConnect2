@@ -8,6 +8,6 @@ const api = axios.create({
     'Content-Type': 'application/json', // スペースを削除
   },
 });
-https://charumeran.herokuapp.com/api/v1/posts
+
 
 export default api;
