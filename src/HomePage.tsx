@@ -81,10 +81,10 @@ const HomePage: React.FC< HomePageProps > =({ filterCategory, filterIncome, setF
       .catch( error  => console.error( "Error fetching posts:", error));
   },[]);
 
-  // フィルタリング後にページをリセット
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [filterCategory, filterIncome]);
+  // // フィルタリング後にページをリセット
+  // useEffect(() => {
+  //   setCurrentPage(1);
+  // }, [filterCategory, filterIncome]);
   
   return (
     <>
@@ -157,7 +157,7 @@ const HomePage: React.FC< HomePageProps > =({ filterCategory, filterIncome, setF
               disabled={currentPage === 1}
               className="text-blue-900"
             >
-              前へ
+              ◀
             </button>
             <div className="flex mx-4">
               {getDisplayedPages().map((page) => (
@@ -179,7 +179,7 @@ const HomePage: React.FC< HomePageProps > =({ filterCategory, filterIncome, setF
               disabled={currentPage === totalPages}
               className="text-blue-900"
             >
-              次へ
+              ▶
             </button>
           </div>
         </div>
